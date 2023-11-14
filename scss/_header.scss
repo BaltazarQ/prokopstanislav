@@ -1,10 +1,12 @@
 header {
-    width: 100%;
+    width: 30%;
     display: flex;
     justify-content: flex-start;
-    background: $color-header;
+    // background: $color-header;
+    background: transparent;
     position: fixed;
-    z-index: 10;
+    height: 100vh;
+    // z-index: 10;
     border-bottom: darken($color-header, 20%) 2px solid;
 }
 
@@ -45,7 +47,7 @@ nav {
     }
     
     .navigation {
-        @include flex-row;
+        @include flex-column;
         padding: 0;
         justify-content: flex-start;
         
