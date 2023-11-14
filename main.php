@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 <section class="preface" id="preface">
     <div class="row">
@@ -180,7 +180,6 @@
     </div>
 
 </section>
-=======
 
 <section class="preface" id="preface">
     <div class="row">
@@ -362,4 +361,3 @@
     </div>
 
 </section>
->>>>>>> ac9cc4e (Obnovenie)
