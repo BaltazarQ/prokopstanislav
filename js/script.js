@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(document).ready(function($) {
 
 
@@ -333,7 +332,6 @@ $(document).ready(function($) {
     });
 
 
-=======
 $(document).ready(function($) {
 
 
@@ -636,6 +634,4 @@ $(document).ready(function($) {
         description.not($('.opened')).slideUp(1000);
     });
 
-
->>>>>>> ac9cc4e (Obnovenie)
 })(jQuery);
