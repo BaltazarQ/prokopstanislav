@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @each $page, $color in $page-colors {
     .#{$page} {
         background: lighten($color, 20%);
@@ -708,7 +707,6 @@ main section {
     }
 }
 
-=======
 @each $page, $color in $page-colors {
     .#{$page} {
         background: lighten($color, 20%);
@@ -1395,5 +1393,3 @@ main section {
         font-weight: bold;
     }
 }
-
->>>>>>> ac9cc4e (Obnovenie)
