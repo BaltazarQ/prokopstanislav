@@ -1,0 +1,44 @@
+$font-size: 16px;
+
+@media (max-width: 560px) {
+    body{
+        $font-size: 12px;
+    }
+}
+
+$font-size-s: $font-size * 0.75;
+$font-size-m: $font-size;
+$font-size-l: $font-size * 1.25;
+
+
+$color-header: #eee;
+
+$color-preface-bg:  #a4abb8;
+$color-profile-bg:  #8fe3fa;
+$color-about-bg:    #fa949c;
+$color-more-bg:     #b0ff8e;
+$color-gallery-bg:  #fbf893;
+$color-contact-bg:  #fbf893;
+
+$color-btn-text: #eee;
+$color-btn-bg: #323232;
+
+
+$page-colors: (
+    'preface':  $color-preface-bg,
+    'profile':  $color-profile-bg,
+    'about':    $color-about-bg,
+    'more':     $color-more-bg,
+    'gallery':  $color-gallery-bg,
+    'contact':  $color-contact-bg,
+);
+
+$more-icons: (
+    'study':    '\1f393',
+    'work':     '\1f4bc',
+    'web-dev':  '\2328',
+    'skills':   '\1f528',
+    'hobby':    '\2615',
+    'traits':   '\1f9cd',
+);
+    

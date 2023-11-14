@@ -1,0 +1,104 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background: $color-header;
+    position: fixed;
+    z-index: 10;
+    border-bottom: darken($color-header, 20%) 2px solid;
+}
+
+nav {
+    @include flex-row();
+    width: 100%;
+    align-items: center;
+}
+
+.menu {
+    @include flex-row;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    margin: 1em 0;
+    
+    &-icon {
+        @include flex-column();
+        align-items: center;
+        
+        .horizontal {
+            padding: 10px;
+            margin: 0.5em;
+            display: none;
+            
+            &:hover {
+                transform: scale(1.5);
+                transition: 0.5s;
+            }
+        }
+        
+        .navigation-wrap {
+            overflow: hidden;
+            @include flex-column;
+            align-items: stretch;
+            position: relative;
+        }
+    }
+    
+    .navigation {
+        @include flex-row;
+        padding: 0;
+        justify-content: flex-start;
+        
+        li {
+            display: flex;
+            justify-content: center;
+            
+            a {
+                padding: 0.4em 2em;
+                color: $color-btn-bg;
+                font-weight: bold;
+                font-size: .8em;
+                border-bottom:  2px solid $color-header;
+            }
+        }
+    }
+
+    .scrolling-line {
+        display: none;
+        background-color: $color-preface-bg;
+        height: 2px;
+        width: 0%;
+
+        position: absolute;
+        bottom: 0px;
+    }
+
+
+
+    @media (max-width: 420px) {
+        .menu-icon {
+            i {
+                display: block;
+            }
+        }
+
+        .navigation {
+        @include flex-column;
+        display: none;
+        }
+
+        .scrolling-line {
+            display: none;
+        }
+    }
+}
+
+@each $page, $color in $page-colors {
+    #menu-#{$page} a:hover,
+    #menu-#{$page} .active {
+        background: lighten($color, 20%);
+        border-bottom:  2px solid darken($color, 35%);
+        color: darken($color, 35%);
+        transition: 0.3s;
+    }
+}
