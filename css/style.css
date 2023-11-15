@@ -155,12 +155,11 @@ main {
 }
 
 main section {
-  padding: 5% 5%;
+  padding: 5% 15%;
   min-height: 100vh;
   justify-content: center;
   height: auto;
   text-align: center;
-  padding-left: 30%;
 }
 main section h1 {
   font-size: 32px;

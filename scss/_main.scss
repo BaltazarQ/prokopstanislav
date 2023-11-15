@@ -5,14 +5,12 @@ main {
 }
 
 main section {
-    padding: 5% 5%;
+    padding: 5% 15%;
 
     min-height: 100vh;
     justify-content: center;
     height: auto;
     text-align: center;
-    padding-left: 30%;
-
     
     h1 {
         @include font-size($font-size-m * 2, 5px, uppercase);
