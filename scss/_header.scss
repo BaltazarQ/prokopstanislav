@@ -1,3 +1,15 @@
+@keyframes slidein {
+    0% {
+      border-left: 0px solid #fca311;
+    }
+    50% {
+        border-left: 10px solid #fca311;
+    }
+    100% {
+      border-left: 5px solid #fca311;
+    }
+  }
+
 header {
     width: 25%;
     min-width: 250px;
@@ -69,6 +81,8 @@ nav {
                     color: #fca311;
                     text-shadow: 2px 2px 0px #000;
                     font-size: 1.3em;
+                    animation-name: slidein;
+                    animation-duration: 0.2s;
                     border-left: 5px solid #fca311;
                   }
             }
