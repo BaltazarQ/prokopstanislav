@@ -11,14 +11,23 @@ $font-size-m: $font-size;
 $font-size-l: $font-size * 1.25;
 
 
-$color-header: #eee;
+$color-header: #323232;
+$color-main: #dadada;
+$color-secondary: #ccc;
 
-$color-preface-bg:  #a4abb8;
-$color-profile-bg:  #8fe3fa;
-$color-about-bg:    #fa949c;
-$color-more-bg:     #b0ff8e;
-$color-gallery-bg:  #fbf893;
-$color-contact-bg:  #fbf893;
+$color-preface-bg:  darken($color-main, 0%);
+$color-profile-bg:  darken($color-main, 2%);
+$color-about-bg:    darken($color-main, 5%);
+$color-more-bg:     darken($color-main, 7%);
+// $color-gallery-bg:  darken($color-main, 10%);
+$color-contact-bg:  darken($color-main, 5%);
+
+// $color-preface-bg:  lighten(#a4abb8, 15%);
+// $color-profile-bg:  lighten(#8fe3fa, 15%);
+// $color-about-bg:    lighten(#fa949c, 15%);
+// $color-more-bg:     lighten(#b0ff8e, 15%);
+// // $color-gallery-bg:  lighten(#fbf893,15%);
+// $color-contact-bg:  lighten(#fbf893, 15%);
 
 $color-btn-text: #eee;
 $color-btn-bg: #323232;
@@ -29,9 +38,18 @@ $page-colors: (
     'profile':  $color-profile-bg,
     'about':    $color-about-bg,
     'more':     $color-more-bg,
-    'gallery':  $color-gallery-bg,
+    // 'gallery':  $color-gallery-bg,
     'contact':  $color-contact-bg,
 );
+
+// $page-colors: (
+//     'preface':  darken($color-preface-bg, 20%),
+//     'profile':  darken($color-profile-bg, 20%),
+//     'about':    darken($color-about-bg, 20%),
+//     'more':     darken($color-more-bg, 20%),
+//     'gallery':  darken($color-gallery-bg, 20%),
+//     'contact':  darken($color-contact-bg, 20%),
+// );
 
 $more-icons: (
     'study':    '\1f393',

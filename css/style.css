@@ -30,11 +30,6 @@ body {
   font-family: "Roboto", sans-serif;
   color: #323232;
 }
-@media (max-width: 780px) {
-  body {
-    width: 90%;
-  }
-}
 @media (max-width: 580px) {
   body {
     width: 100%;
@@ -63,13 +58,14 @@ footer {
 }
 
 header {
-  width: 30%;
+  width: 25%;
+  min-width: 250px;
   display: flex;
   justify-content: flex-start;
-  background: transparent;
+  background: #323232;
   position: fixed;
   height: 100vh;
-  border-bottom: #bbbbbb 2px solid;
+  border-right: #000 2px solid;
 }
 
 nav {
@@ -119,137 +115,30 @@ nav {
 }
 .menu .navigation li {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  width: 200px;
+  height: 3em;
 }
 .menu .navigation li a {
-  padding: 0.4em 2em;
-  color: #323232;
+  padding: 0.5em;
+  color: #ccc;
   font-weight: bold;
-  font-size: 0.8em;
-  border-bottom: 2px solid #eee;
+  font-size: 1em;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 1px #000;
 }
-.menu .scrolling-line {
-  display: none;
-  background-color: #a4abb8;
-  height: 2px;
-  width: 0%;
-  position: absolute;
-  bottom: 0px;
-}
-@media (max-width: 420px) {
-  .menu .menu-icon i {
-    display: block;
-  }
-  .menu .navigation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    display: none;
-  }
-  .menu .scrolling-line {
-    display: none;
-  }
-}
-
-#menu-preface a:hover,
-#menu-preface .active {
-  background: #dde0e5;
-  border-bottom: 2px solid #4a525f;
-  color: #4a525f;
-  transition: 0.3s;
-}
-
-#menu-profile a:hover,
-#menu-profile .active {
-  background: #f1fbfe;
-  border-bottom: 2px solid #09a3cd;
-  color: #09a3cd;
-  transition: 0.3s;
-}
-
-#menu-about a:hover,
-#menu-about .active {
-  background: #fff5f6;
-  border-bottom: 2px solid #d20a19;
-  color: #d20a19;
-  transition: 0.3s;
-}
-
-#menu-more a:hover,
-#menu-more .active {
-  background: #f7fff4;
-  border-bottom: 2px solid #42db00;
-  color: #42db00;
-  transition: 0.3s;
-}
-
-#menu-gallery a:hover,
-#menu-gallery .active {
-  background: #fffef5;
-  border-bottom: 2px solid #d4ce08;
-  color: #d4ce08;
-  transition: 0.3s;
-}
-
-#menu-contact a:hover,
-#menu-contact .active {
-  background: #fffef5;
-  border-bottom: 2px solid #d4ce08;
-  color: #d4ce08;
-  transition: 0.3s;
-}
-
-.preface {
-  background: #dde0e5;
-  border-top: #6c768a 2px solid;
-}
-.preface h1:not(.name) {
-  border-bottom: #3f4551 1px solid;
-}
-
-.profile {
-  background: #f1fbfe;
-  border-top: #2dcbf6 2px solid;
-}
-.profile h1:not(.name) {
-  border-bottom: #0890b5 1px solid;
-}
-
-.about {
-  background: #fff5f6;
-  border-top: #f53342 2px solid;
-}
-.about h1:not(.name) {
-  border-bottom: #b90917 1px solid;
-}
-
-.more {
-  background: #f7fff4;
-  border-top: #69ff28 2px solid;
-}
-.more h1:not(.name) {
-  border-bottom: #3ac100 1px solid;
-}
-
-.gallery {
-  background: #fffef5;
-  border-top: #f7f231 2px solid;
-}
-.gallery h1:not(.name) {
-  border-bottom: #bbb607 1px solid;
-}
-
-.contact {
-  background: #fffef5;
-  border-top: #f7f231 2px solid;
-}
-.contact h1:not(.name) {
-  border-bottom: #bbb607 1px solid;
+.menu .navigation li a:hover {
+  color: #fca311;
+  text-shadow: 2px 2px 0px #000;
+  font-size: 1.3em;
+  border-left: 5px solid #fca311;
 }
 
 main {
   margin-top: 0;
   width: 100%;
+  margin-left: 25%;
 }
 
 main section {
@@ -606,7 +495,7 @@ main section .main-text {
   align-items: center;
   align-items: flex-start;
   padding: 1em;
-  box-shadow: #fcc5c9 0px 0px 10px;
+  box-shadow: #e7e7e7 0px 0px 10px;
   border-radius: 10px;
   width: 50%;
   margin: auto;
@@ -617,7 +506,7 @@ main section .main-text {
   transition: 1s;
 }
 .aside-contact a:hover {
-  color: #f53342;
+  color: #9a9a9a;
   font-weight: bold;
 }
 .aside-contact .social-icon {
@@ -827,10 +716,10 @@ main section .main-text {
 #study::before {
   content: "🎓";
   font-size: 3em;
-  background: #f7fff4;
+  background: #fbfbfb;
   padding: 0.5em;
   border-radius: 15px;
-  box-shadow: #d4ffc1 0px 0px 10px;
+  box-shadow: #e2e2e2 0px 0px 10px;
 }
 @media (max-width: 780px) {
   #study::before {
@@ -847,10 +736,10 @@ main section .main-text {
 #work::before {
   content: "💼";
   font-size: 3em;
-  background: #f7fff4;
+  background: #fbfbfb;
   padding: 0.5em;
   border-radius: 15px;
-  box-shadow: #d4ffc1 0px 0px 10px;
+  box-shadow: #e2e2e2 0px 0px 10px;
 }
 @media (max-width: 780px) {
   #work::before {
@@ -867,10 +756,10 @@ main section .main-text {
 #web-dev::before {
   content: "⌨";
   font-size: 3em;
-  background: #f7fff4;
+  background: #fbfbfb;
   padding: 0.5em;
   border-radius: 15px;
-  box-shadow: #d4ffc1 0px 0px 10px;
+  box-shadow: #e2e2e2 0px 0px 10px;
 }
 @media (max-width: 780px) {
   #web-dev::before {
@@ -887,10 +776,10 @@ main section .main-text {
 #skills::before {
   content: "🔨";
   font-size: 3em;
-  background: #f7fff4;
+  background: #fbfbfb;
   padding: 0.5em;
   border-radius: 15px;
-  box-shadow: #d4ffc1 0px 0px 10px;
+  box-shadow: #e2e2e2 0px 0px 10px;
 }
 @media (max-width: 780px) {
   #skills::before {
@@ -907,10 +796,10 @@ main section .main-text {
 #hobby::before {
   content: "☕";
   font-size: 3em;
-  background: #f7fff4;
+  background: #fbfbfb;
   padding: 0.5em;
   border-radius: 15px;
-  box-shadow: #d4ffc1 0px 0px 10px;
+  box-shadow: #e2e2e2 0px 0px 10px;
 }
 @media (max-width: 780px) {
   #hobby::before {
@@ -927,10 +816,10 @@ main section .main-text {
 #traits::before {
   content: "🧍";
   font-size: 3em;
-  background: #f7fff4;
+  background: #fbfbfb;
   padding: 0.5em;
   border-radius: 15px;
-  box-shadow: #d4ffc1 0px 0px 10px;
+  box-shadow: #e2e2e2 0px 0px 10px;
 }
 @media (max-width: 780px) {
   #traits::before {
@@ -1013,7 +902,7 @@ main section .main-text {
   margin: 3em auto;
   text-align: center;
   display: inline-block;
-  border-bottom: #f7f231 1px solid;
+  border-bottom: #9a9a9a 1px solid;
 }
 .contact-left p {
   font-size: 16px;
@@ -1060,7 +949,7 @@ main section .main-text {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #292d34;
+  background: #5b5b5b;
   opacity: 0.95;
   z-index: 20;
   margin: 0 auto;
@@ -1072,7 +961,7 @@ main section .main-text {
   width: 93%;
   margin: 0 auto;
   padding: 1em 5em;
-  background-color: #f7fff4;
+  background-color: #fbfbfb;
   border: #fff 20px solid;
   border-radius: 10px;
   overflow-y: scroll;
@@ -1118,7 +1007,7 @@ main section .main-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #dde0e5;
+  background: white;
   align-items: stretch;
   width: 100%;
   padding-top: 10%;

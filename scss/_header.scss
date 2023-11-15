@@ -1,13 +1,12 @@
 header {
-    width: 30%;
+    width: 25%;
+    min-width: 250px;
     display: flex;
     justify-content: flex-start;
-    // background: $color-header;
-    background: transparent;
+    background: $color-header;
     position: fixed;
     height: 100vh;
-    // z-index: 10;
-    border-bottom: darken($color-header, 20%) 2px solid;
+    border-right: #000 2px solid;
 }
 
 nav {
@@ -53,54 +52,43 @@ nav {
         
         li {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
+            align-items: center;
+            width: 200px;
+            height: 3em;
             
             a {
-                padding: 0.4em 2em;
-                color: $color-btn-bg;
+                padding: 0.5em;
+                color: $color-secondary;
                 font-weight: bold;
-                font-size: .8em;
-                border-bottom:  2px solid $color-header;
+                font-size: 1em;
+                letter-spacing: 2px;
+                text-shadow: 3px 3px 1px #000;
+
+                &:hover {
+                    color: #fca311;
+                    text-shadow: 2px 2px 0px #000;
+                    font-size: 1.3em;
+                    border-left: 5px solid #fca311;
+                  }
             }
         }
     }
 
-    .scrolling-line {
-        display: none;
-        background-color: $color-preface-bg;
-        height: 2px;
-        width: 0%;
+    // @media (max-width: 420px) {
+    //     .menu-icon {
+    //         i {
+    //             display: block;
+    //         }
+    //     }
 
-        position: absolute;
-        bottom: 0px;
-    }
+    //     .navigation {
+    //     @include flex-column;
+    //     display: none;
+    //     }
 
-
-
-    @media (max-width: 420px) {
-        .menu-icon {
-            i {
-                display: block;
-            }
-        }
-
-        .navigation {
-        @include flex-column;
-        display: none;
-        }
-
-        .scrolling-line {
-            display: none;
-        }
-    }
-}
-
-@each $page, $color in $page-colors {
-    #menu-#{$page} a:hover,
-    #menu-#{$page} .active {
-        background: lighten($color, 20%);
-        border-bottom:  2px solid darken($color, 35%);
-        color: darken($color, 35%);
-        transition: 0.3s;
-    }
+    //     .scrolling-line {
+    //         display: none;
+    //     }
+    // }
 }
