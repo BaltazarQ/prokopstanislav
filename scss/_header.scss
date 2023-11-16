@@ -13,12 +13,22 @@
 header {
     width: 25%;
     min-width: 250px;
-    display: flex;
+    @include flex-column();
     justify-content: flex-start;
     background: $color-header;
     position: fixed;
     height: 100vh;
     border-right: #000 2px solid;
+}
+
+.profile-photo {
+    margin: 100px auto 50px;
+
+    img {
+        width: 150px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+    }
 }
 
 nav {

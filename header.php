@@ -1,3 +1,6 @@
+<section class="profile-photo">
+    <img src="images/profil-square.jpg" alt="rounded profil photo">
+</section>
 <nav>
     <ul class="menu">
         <li class="menu-icon"><i class=" horizontal fas fa-bars"></i>
