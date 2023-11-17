@@ -11,9 +11,16 @@ $font-size-m: $font-size;
 $font-size-l: $font-size * 1.25;
 
 
-$color-header: #323232;
-$color-main: #dadada;
-$color-secondary: #ccc;
+// $color-header: #03071e;
+$color-main: #ccc;
+$color-secondary: #03071e;
+$color-highlight: #fca311;
+
+// darkmode:
+// $color-main: #14213d;
+// $color-text: #e5e5e5;
+// $color-secondary: #03071e;
+// $color-highlight: #fca311;
 
 $color-preface-bg:  darken($color-main, 0%);
 $color-profile-bg:  darken($color-main, 2%);

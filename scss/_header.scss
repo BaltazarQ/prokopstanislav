@@ -1,12 +1,12 @@
 @keyframes slidein {
     0% {
-      border-left: 0px solid #fca311;
+      border-left: 0px solid $color-highlight;
     }
     50% {
-        border-left: 10px solid #fca311;
+        border-left: 10px solid $color-highlight;
     }
     100% {
-      border-left: 5px solid #fca311;
+      border-left: 5px solid $color-highlight;
     }
   }
 
@@ -15,21 +15,28 @@ header {
     min-width: 250px;
     @include flex-column();
     justify-content: flex-start;
-    background: $color-header;
+    background: $color-secondary;
     position: fixed;
     height: 100vh;
     border-right: #000 2px solid;
+    display: none;
 }
 
-.profile-photo {
-    margin: 100px auto 50px;
+// .profile-photo {
+//     margin: 100px auto 50px;
 
-    img {
-        width: 150px;
-        border-radius: 50%;
-        border: 5px solid #fff;
-    }
-}
+//     img {
+//         width: 150px;
+//         border-radius: 50%;
+//         border: 2px solid $color-main;
+
+//         &:hover {
+//             border: 5px solid $color-highlight;
+//             scale: 1.1;
+//             transition: 0.1s;
+//         }
+//     }
+// }
 
 nav {
     @include flex-row();
@@ -54,8 +61,8 @@ nav {
             display: none;
             
             &:hover {
-                transform: scale(1.5);
                 transition: 0.5s;
+                transform: scale(1.5);
             }
         }
         
@@ -81,19 +88,19 @@ nav {
             
             a {
                 padding: 0.5em;
-                color: $color-secondary;
+                color: $color-main;
                 font-weight: bold;
                 font-size: 1em;
                 letter-spacing: 2px;
                 text-shadow: 3px 3px 1px #000;
 
                 &:hover {
-                    color: #fca311;
+                    color: $color-highlight;
                     text-shadow: 2px 2px 0px #000;
                     font-size: 1.3em;
                     animation-name: slidein;
                     animation-duration: 0.2s;
-                    border-left: 5px solid #fca311;
+                    border-left: 5px solid $color-highlight;
                   }
             }
         }

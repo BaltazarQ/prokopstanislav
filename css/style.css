@@ -27,8 +27,9 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
-  font-family: "Roboto", sans-serif;
-  color: #323232;
+  font-family: "DM Mono", monospace;
+  color: #03071e;
+  background: #ccc;
 }
 @media (max-width: 580px) {
   body {
@@ -75,19 +76,11 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background: #323232;
+  background: #03071e;
   position: fixed;
   height: 100vh;
   border-right: #000 2px solid;
-}
-
-.profile-photo {
-  margin: 100px auto 50px;
-}
-.profile-photo img {
-  width: 150px;
-  border-radius: 50%;
-  border: 5px solid #fff;
+  display: none;
 }
 
 nav {
@@ -117,8 +110,8 @@ nav {
   display: none;
 }
 .menu-icon .horizontal:hover {
-  transform: scale(1.5);
   transition: 0.5s;
+  transform: scale(1.5);
 }
 .menu-icon .navigation-wrap {
   overflow: hidden;
@@ -162,22 +155,19 @@ nav {
 main {
   margin-top: 0;
   width: 100%;
-  margin-left: 25%;
+  background-color: #03071e;
+  color: #ccc;
 }
 
 main section {
-  padding: 5% 15%;
+  padding: 5% 10%;
   min-height: 100vh;
-  justify-content: center;
-  height: auto;
-  text-align: center;
 }
 main section h1 {
   font-size: 32px;
   line-height: 41.6px;
   letter-spacing: 5px;
-  text-transform: uppercase;
-  text-align: center;
+  text-transform: none;
 }
 @media (max-width: 580px) {
   main section h1 {
@@ -199,7 +189,7 @@ main section h3 {
   font-size: 24px;
   line-height: 31.2px;
   letter-spacing: 2px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 @media (max-width: 580px) {
   main section h3 {
@@ -279,70 +269,37 @@ main section .main-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
-  text-align: left;
+  align-items: center;
 }
-.preface .row {
-  display: flex;
-  flex-direction: row;
+.preface .profile-photo {
+  margin: 50px;
 }
-.preface-left {
+.preface .profile-photo img {
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+}
+.preface .profile-photo img:hover {
+  border: 5px solid #fca311;
+  scale: 1.03;
+  transition: 0.1s;
+}
+.preface-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  flex: 3;
-  padding-right: 10%;
-}
-.preface-left .name {
-  text-decoration: underline;
-}
-.preface-left .main-text {
-  font-size: 20px;
-  line-height: 26px;
-  letter-spacing: 4px;
-  text-transform: none;
-  letter-spacing: 2px;
-}
-@media (max-width: 580px) {
-  .preface-left .main-text {
-    font-size: 16px;
-  }
-}
-.preface-right {
-  flex: 2;
-  overflow: hidden;
-  border-radius: 10px;
-  text-align: left;
-}
-.preface-right img {
   width: 100%;
-  height: 120%;
-  position: center;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
-.preface-right img:hover {
-  transform: scale(1.2);
-  transition: 1s;
+.preface-info .name {
+  font-size: 48px;
+  color: #fca311;
+}
+.preface-info .position {
+  font-size: 36px;
 }
 @media (max-width: 780px) {
   .preface {
     text-align: center;
-  }
-  .preface .row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .preface .row .preface-left {
-    padding: 0;
-  }
-  .preface .row .preface-right {
-    margin: 1em 5em 0;
-  }
-  .preface .row img {
-    height: 120%;
   }
 }
 
@@ -518,7 +475,7 @@ main section .main-text {
   align-items: center;
   align-items: flex-start;
   padding: 1em;
-  box-shadow: #e7e7e7 0px 0px 10px;
+  box-shadow: #d9d9d9 0px 0px 10px;
   border-radius: 10px;
   width: 50%;
   margin: auto;
@@ -529,7 +486,7 @@ main section .main-text {
   transition: 1s;
 }
 .aside-contact a:hover {
-  color: #9a9a9a;
+  color: #8c8c8c;
   font-weight: bold;
 }
 .aside-contact .social-icon {
@@ -739,10 +696,10 @@ main section .main-text {
 #study::before {
   content: "🎓";
   font-size: 3em;
-  background: #fbfbfb;
+  background: #ededed;
   padding: 0.5em;
   border-radius: 15px;
-  box-shadow: #e2e2e2 0px 0px 10px;
+  box-shadow: #d4d4d4 0px 0px 10px;
 }
 @media (max-width: 780px) {
   #study::before {
@@ -759,10 +716,10 @@ main section .main-text {
 #work::before {
   content: "💼";
   font-size: 3em;
-  background: #fbfbfb;
+  background: #ededed;
   padding: 0.5em;
   border-radius: 15px;
-  box-shadow: #e2e2e2 0px 0px 10px;
+  box-shadow: #d4d4d4 0px 0px 10px;
 }
 @media (max-width: 780px) {
   #work::before {
@@ -779,10 +736,10 @@ main section .main-text {
 #web-dev::before {
   content: "⌨";
   font-size: 3em;
-  background: #fbfbfb;
+  background: #ededed;
   padding: 0.5em;
   border-radius: 15px;
-  box-shadow: #e2e2e2 0px 0px 10px;
+  box-shadow: #d4d4d4 0px 0px 10px;
 }
 @media (max-width: 780px) {
   #web-dev::before {
@@ -799,10 +756,10 @@ main section .main-text {
 #skills::before {
   content: "🔨";
   font-size: 3em;
-  background: #fbfbfb;
+  background: #ededed;
   padding: 0.5em;
   border-radius: 15px;
-  box-shadow: #e2e2e2 0px 0px 10px;
+  box-shadow: #d4d4d4 0px 0px 10px;
 }
 @media (max-width: 780px) {
   #skills::before {
@@ -819,10 +776,10 @@ main section .main-text {
 #hobby::before {
   content: "☕";
   font-size: 3em;
-  background: #fbfbfb;
+  background: #ededed;
   padding: 0.5em;
   border-radius: 15px;
-  box-shadow: #e2e2e2 0px 0px 10px;
+  box-shadow: #d4d4d4 0px 0px 10px;
 }
 @media (max-width: 780px) {
   #hobby::before {
@@ -839,10 +796,10 @@ main section .main-text {
 #traits::before {
   content: "🧍";
   font-size: 3em;
-  background: #fbfbfb;
+  background: #ededed;
   padding: 0.5em;
   border-radius: 15px;
-  box-shadow: #e2e2e2 0px 0px 10px;
+  box-shadow: #d4d4d4 0px 0px 10px;
 }
 @media (max-width: 780px) {
   #traits::before {
@@ -925,7 +882,7 @@ main section .main-text {
   margin: 3em auto;
   text-align: center;
   display: inline-block;
-  border-bottom: #9a9a9a 1px solid;
+  border-bottom: #8c8c8c 1px solid;
 }
 .contact-left p {
   font-size: 16px;
@@ -972,7 +929,7 @@ main section .main-text {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #5b5b5b;
+  background: #4d4d4d;
   opacity: 0.95;
   z-index: 20;
   margin: 0 auto;
@@ -984,7 +941,7 @@ main section .main-text {
   width: 93%;
   margin: 0 auto;
   padding: 1em 5em;
-  background-color: #fbfbfb;
+  background-color: #ededed;
   border: #fff 20px solid;
   border-radius: 10px;
   overflow-y: scroll;

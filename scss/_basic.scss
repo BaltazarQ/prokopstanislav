@@ -28,8 +28,13 @@ body {
 	// width: 70%;
 	// height: 100%;
 	margin: 0 auto;
-	font-family: 'Roboto', sans-serif;
-	color: #323232;
+	// font-family: 'Roboto', sans-serif;
+
+	font-family: 'DM Mono', monospace;
+	// font-family: 'Josefin Sans', sans-serif;
+	// font-family: 'Playpen Sans', cursive;
+	color: $color-secondary;
+	background: $color-main;
 
 	// @media ( max-width: 780px ) {
 	// 	width: 90%;

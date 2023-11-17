@@ -1,18 +1,28 @@
-
-
 <section class="preface" id="preface">
-    <div class="row">
-        <article class="preface-left">
-            <h1 class="name">Stanislav Prokop</h1>
-            <p class="main-text">Som mladý, optimisticky naladený muž, ktorý sa nebojí nových výziev. Na veci sa pozerám z viacerých strán. Rád trávim čas s priateľmi a rodinou. Mám rád úprimnosť, humor a bryndzové halušky. Zaujíma ma história, aj technologické novinky.</p>
+    <!-- <div class="row"> -->
+        <article class="profile-photo">
+            <img src="images/profil-square.jpg" alt="rounded profil photo">
         </article>
-        <div class="preface-right">
-            <img src="images/preface.jpg" alt="profilová foto Stanislav Prokop">
-        </div>
-    </div>
-    <div class="btn">
+        <article class="preface-info">
+            <h1 class="name">Stanislav Prokop</h1>
+            <h3 class="position">Web developer</h3>
+            <!-- <div class="preface-wrap">
+                <strong>Vek:</strong>
+                <p class="main-text">38</p>
+            </div>
+            <div class="preface-wrap">
+                <strong>Mesto:</strong>
+                <p class="main-text">Bardejov</p>
+            </div> -->
+            <!-- <p class="main-text">Som mladý, optimisticky naladený muž, ktorý sa nebojí nových výziev. Na veci sa pozerám z viacerých strán. Rád trávim čas s priateľmi a rodinou. Mám rád úprimnosť, humor a bryndzové halušky. Zaujíma ma história, aj technologické novinky.</p> -->
+        </article>
+        <!-- <div class="preface-right"> -->
+            <!-- <img src="images/preface.jpg" alt="profilová foto Stanislav Prokop">
+        </div> -->
+    <!-- </div> -->
+    <!-- <div class="btn">
         <a href="#profile">Viac</a>
-    </div>
+    </div> -->
 </section>
 
 <section class="profile" id="profile">
