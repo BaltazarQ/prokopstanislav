@@ -26,9 +26,9 @@
     transition: 0.2s;
 }
 
-@mixin font-size ($size: $font-size, $spacing: 1px, $transform: none) {
+@mixin font-size ($size: $font-size, $line-height: normal, $spacing: 0px, $transform: none) {
     font-size: $size;
-    line-height: $size * 1.3;
+    line-height: $line-height;
     letter-spacing: $spacing;
     text-transform: $transform;
 
