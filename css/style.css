@@ -257,9 +257,23 @@ main section p {
   align-items: center;
   align-items: center;
   min-height: 100vh;
+  position: relative;
+  padding-top: 0;
+}
+.preface-bg {
+  position: absolute;
+  height: 100vh;
+  overflow: hidden;
+  border-bottom: 1px solid #fca311;
+}
+.preface-bg img {
+  width: 100%;
+  opacity: 0.3;
+  object-fit: contain;
 }
 .preface .profile-photo {
   margin: 50px;
+  z-index: 100;
 }
 .preface .profile-photo img {
   width: 200px;
@@ -276,6 +290,7 @@ main section p {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  z-index: 100;
 }
 .preface-info .name {
   font-size: 48px;
@@ -412,7 +427,9 @@ main section p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-items: flex-start;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
 }
 .about-container article {
   display: flex;
@@ -531,7 +548,7 @@ main section p {
   }
 }
 .aside-work .presentation .git:hover {
-  color: #323232;
+  color: #fca311;
   text-decoration: none;
 }
 .aside-work .presentation-gallery a, .aside-work .presentation-family-game a, .aside-work .presentation-fiato-rosa a {
@@ -724,62 +741,6 @@ main section p {
   }
 }
 
-.more {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.more .curiculum {
-  width: 100%;
-}
-.more .cv {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin-bottom: 0;
-  justify-content: space-between;
-}
-.more .cv li {
-  width: 15%;
-  text-align: center;
-  margin: 2% 6%;
-  line-height: 3em;
-}
-.more .cv li:hover {
-  transform: scale(1.15);
-  transition: 0.5s;
-}
-.more .cv li:hover p {
-  font-weight: bold;
-}
-.more .cv li a {
-  color: #323232;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-@media (max-width: 560px) {
-  .more .cv li p {
-    margin-top: 0;
-  }
-}
-@media (max-width: 440px) {
-  .more .cv li {
-    width: 22%;
-    margin: 2% 5%;
-  }
-}
-.more .cv-pdf a,
-.more .git-link a {
-  text-decoration: underline;
-}
-.more .cv-pdf a:hover,
-.more .git-link a:hover {
-  color: #323232;
-  font-weight: 800;
-}
-
 .contact {
   height: auto;
   display: flex;
@@ -793,16 +754,16 @@ main section p {
   flex-direction: column;
   align-items: center;
   align-items: center;
+  width: 70%;
+  margin: 0 auto;
 }
 .contact-left h3 {
-  margin: 3em auto;
   text-align: center;
   display: inline-block;
-  border-bottom: #8c8c8c 1px solid;
 }
 .contact-left p {
   font-size: 16px;
-  line-height: 1.5em;
+  line-height: 1.7em;
   letter-spacing: 0px;
   text-transform: none;
 }
