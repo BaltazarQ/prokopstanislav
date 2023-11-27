@@ -7,10 +7,14 @@
     color: darken($color-btn-text, 10%);
     background: darken($color-secondary, 20%);
     border-top: 1px solid $color-highlight;
-    // padding-bottom: 3em;
     
     a {
         color: darken($color-main, 10%);
+
+        &:hover {
+            color: $color-highlight;
+            transition: 0.3s;
+        }
     }
     
     .social-icon {
@@ -23,12 +27,15 @@
         }
     }
 
-    @media ( max-width: 940px) {
-        @include flex-column();
-        letter-spacing: 2px;
+    @media ( max-width: 768px) {
+        @include font-size(8px);
 
-        p {
-            margin: 0.3em;
+        .social-icon a {
+            margin: 0;
         }
+    }
+
+    @media ( max-width: 576px) {
+        @include flex-column;
     }
 }
