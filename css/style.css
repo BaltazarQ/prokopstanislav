@@ -157,6 +157,7 @@ main {
   width: 100%;
   background-color: #03071e;
   color: #ccc;
+  padding-bottom: 50px;
 }
 
 main section {
@@ -262,17 +263,18 @@ main section p {
 }
 .preface-bg {
   position: absolute;
-  height: 100vh;
+  height: 101vh;
   overflow: hidden;
   border-bottom: 1px solid #fca311;
 }
 .preface-bg img {
   width: 100%;
+  min-height: 100vh;
   opacity: 0.3;
-  object-fit: contain;
 }
 .preface .profile-photo {
-  margin: 50px;
+  padding: 50px;
+  margin-top: 50px;
   z-index: 100;
 }
 .preface .profile-photo img {
@@ -986,8 +988,8 @@ main section p {
   align-items: center;
   padding: 1em 0;
   color: #d5d5d5;
-  background: #323232;
-  padding-bottom: 3em;
+  background: black;
+  border-top: 1px solid #fca311;
 }
 @media (max-width: 580px) {
   .footer {
@@ -995,7 +997,7 @@ main section p {
   }
 }
 .footer a {
-  color: #eeeeee;
+  color: #b3b3b3;
 }
 .footer .social-icon {
   display: flex;

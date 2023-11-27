@@ -5,11 +5,12 @@
     align-items: center;
     padding: 1em 0;
     color: darken($color-btn-text, 10%);
-    background: $color-btn-bg;
-    padding-bottom: 3em;
+    background: darken($color-secondary, 20%);
+    border-top: 1px solid $color-highlight;
+    // padding-bottom: 3em;
     
     a {
-        color: darken($color-btn-text, 0%);
+        color: darken($color-main, 10%);
     }
     
     .social-icon {
