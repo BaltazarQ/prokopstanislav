@@ -143,6 +143,8 @@ main section {
                 width: 175px;
             }
         } 
+    display: none;
+
     }
 
     @media (max-width: 576px) {
@@ -161,6 +163,7 @@ main section {
             }
         }
     }
+    display: none;
 }
 
 

@@ -11,7 +11,7 @@
     </article>
 </section>
 
-<section class="profile" id="profile">
+<section class="profile" id="about">
     <div class="profile-row">
         <article class="profile-left">
             <h3>O mne</h3>
@@ -38,7 +38,7 @@
     </div>
 </section>
 
-<section class="about" id="about">
+<section class="about" id="profile">
     <div class="about-container">
         <h3>Moje skúsenosti</h3>
         <article>
@@ -51,7 +51,7 @@
     </div>
 </section>
 
-<section class="more" id="more">
+<section class="more" id="works">
 
 <div class="aside-work">
         <h3>Z mojich prác</h3>
