@@ -33,7 +33,7 @@
     text-transform: $transform;
 
     
-    @media (max-width: 580px) {
+    @media (max-width: 576px) {
         font-size: $size * 0.8;
     }
 }
