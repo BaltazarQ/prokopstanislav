@@ -7,7 +7,7 @@ main {
 }
 
 main section {
-    padding: 5% 15%;
+    padding: 15% 15% 0;
 
     h1 {
         @include font-size($font-size-m * 2, normal, 5px);
@@ -69,6 +69,8 @@ main section {
     position: relative;
     padding-top: 0;
     padding: 5%;
+    // z-index: 20;
+    // display: none;
 
     &-bg {
         position: absolute;
@@ -500,16 +502,24 @@ main section {
 // *****
 
 .back-to-top {
-    color: rgb(167, 3, 3);
+    color: $color-highlight;
     position: fixed;
-    right: 8%;
+    right: 2%;
     bottom: 10%;
     
     &:hover {
-        color: lighten(rgb(186, 1, 1), 50%);
+        color: lighten($color-highlight, 20%);
+    }
+    
+    i {
+        font-size: 48px;
     }
 
-    @media (max-width: 780px) {
-        right: 1%;
+    @media (max-width: 576px) {
+        bottom: 5%;
+
+        i {
+            font-size: 36px;
+        }
     }
 }

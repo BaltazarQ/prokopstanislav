@@ -1,14 +1,17 @@
 <section class="preface" id="preface">
-    <div class="preface-bg">
-        <img src="images/pexels-markus-spiske-1089438.jpg" alt="">
-    </div>
-    <article class="profile-photo">
-        <img src="images/profil-square.jpg" alt="rounded profil photo">
-    </article>
-    <article class="preface-info">
-        <h1 class="name">Stanislav Prokop</h1>
-        <h2 class="position">Web developer</h2>
-    </article>
+    <!-- <div class="preface-wrap"> -->
+
+        <div class="preface-bg">
+            <img src="images/pexels-markus-spiske-1089438.jpg" alt="">
+        </div>
+    <!-- </div> -->
+        <article class="profile-photo">
+            <img src="images/profil-square.jpg" alt="rounded profil photo">
+        </article>
+        <article class="preface-info">
+            <h1 class="name">Stanislav Prokop</h1>
+            <h2 class="position">Web developer</h2>
+        </article>
 </section>
 
 <section class="about" id="about">
