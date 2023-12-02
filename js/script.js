@@ -82,4 +82,30 @@ $(document).ready(function($) {
 
     })
 
+
+    // 
+	// 
+	// ===== BACK-TO-TOP SIPKA =====
+	// 
+	// 
+
+	var backToTop = $( '<a>', {
+        href: '#home',
+        class: 'back-to-top',
+        html: '<i class="fa fa-caret-up fa-5x"></i>'
+    });
+
+    backToTop
+    .hide()
+    .appendTo('body')
+    .on('click', function () {
+    $('html, body').animate({ scrollTop: 0});
+    });
+
+    win.on('scroll', function () {
+    if ( win.scrollTop() >= 200 ) backToTop.fadeIn();
+    else backToTop.hide();
+    });
+
+
 })(jQuery);
