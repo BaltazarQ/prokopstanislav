@@ -59,7 +59,7 @@
         <div class="presentation">
             
             <div class="presentation-item">
-                <a href="family-game\index.php" target="blank">
+                <a href="portfolio/family-game/index.php" target="blank">
                     <img src="images/family-game.png" alt="">
                 </a>
                 <span>Quiz</span>
