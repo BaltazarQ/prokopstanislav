@@ -68,7 +68,7 @@
             </div>
 
             <div class="presentation-item">
-                <a href="fiato_rosa\index.php" target="blank">
+                <a href="portfolio/fiato_rosa/index.php" target="blank">
                     <img src="images/fiato-rosa.png" alt="">
                 </a>
                 <span>Fiato Rosa</span>
