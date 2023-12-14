@@ -1,10 +1,7 @@
 <section class="preface" id="preface">
-    <!-- <div class="preface-wrap"> -->
-
         <div class="preface-bg">
             <img src="images/pexels-markus-spiske-1089438.jpg" alt="">
         </div>
-    <!-- </div> -->
         <article class="profile-photo">
             <img src="images/profil-square.jpg" alt="rounded profil photo">
         </article>
@@ -36,7 +33,6 @@
                     <a class="social-git" href="https://github.com/BaltazarQ" target="blank"><i class="fab fa-github"></i></a>
                 </div>
             </aside>
-            <!-- </div> -->
         </article>
     </div>
 </section>
@@ -58,32 +54,39 @@
         <h3>Z mojich prác</h3>
         <div class="presentation">
             
-            <div class="presentation-item">
-                <a href="portfolio/family-game/index.php" target="blank">
-                    <img src="images/family-game.png" alt="">
-                </a>
-                <span>Quiz</span>
-                <p class="tech-list">HTML/PHP, CSS/Sass, Javascript, jQuerry</p>
-                <p><a class="git" href="https://github.com/BaltazarQ/family-game">GitHub</a></p>
-            </div>
+        <?php
+            $my_works = [
+                
+                [
+                    'name' => 'Quiz',
+                    'link' => 'family-game/index.php',
+                    'tech-list' => 'HTML/PHP, CSS/Sass, Javascript, jQuerry',
+                    'img' => 'family-game.png',
+                    'github' => 'https://github.com/BaltazarQ/family-game'
+                ],
+                [
+                    'name' => 'Fiato Rosa',
+                    'link' => 'family-game/index.php',
+                    'tech-list' => 'HTML/PHP, CSS/Sass, SQL, Javascript',
+                    'img' => 'fiato-rosa.png',
+                    'github' => 'https://github.com/BaltazarQ/fiato-rosa'
+                ],
+            ];
 
-            <div class="presentation-item">
-                <a href="portfolio/fiato_rosa/index.php" target="blank">
-                    <img src="images/fiato-rosa.png" alt="">
-                </a>
-                <span>Fiato Rosa</span>
-                <p class="tech-list">HTML/PHP, CSS/Sass, SQL, Javascript</p>
-                <p><a class="git" href="https://github.com/BaltazarQ/fiato-rosa">GitHub</a></p>
-            </div>
-            
-            <div class="presentation-item">
-                <a href="moja_stranka/index.php" target="blank">
-                    <img src="images/moja-stranka.png" alt="">
-                </a>
-                <span>My Family</span>
-                <p class="tech-list">HTML/PHP, CSS, SQL, Javascript/jQuerry</p>
-                <p><a class="git" href="https://github.com/BaltazarQ/moja-stranka">GitHub</a></p>
-            </div>
+            foreach ($my_works as $work) {
+                ?>
+                <div class="presentation-item">
+                    <a href="portfolio/<?php echo $work['link'];?>" target="blank">
+                        <img src="images/<?php echo $work['img'];?>" alt="">
+                    </a>
+                    <span><?php echo $work['name'];?></span>
+                    <p class="tech-list"><?php echo $work['tech-list'];?></p>
+                    <p><a class="git" href="<?php echo $work['github'];?>">GitHub</a></p>
+                </div>
+                <?php
+            }
+        ?>
+
         </div>
     </div>
 </section>
