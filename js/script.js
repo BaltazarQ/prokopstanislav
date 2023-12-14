@@ -1,11 +1,10 @@
 $(document).ready(function($) {
     //
     //
-    // ZOBRAZENIE HEADER, SLIDE-UP preface section
+    // ZOBRAZENIE HEADER
     //
     //
     var header = $('header'),
-        preface = $('#preface'),
         win = $(window),
         aboutTop = $('#about').offset().top,
         profileTop = $('#profile').offset().top,
@@ -21,6 +20,23 @@ $(document).ready(function($) {
     });
 
 
+    //
+    //
+    // Parallax na preface section
+    //
+    //
+    $(window).scroll(function() {
+        // Získanie hodnoty skrolovania
+        var scrollPosition = $(this).scrollTop();
+  
+        // Výpočet hodnoty pre background - parallax
+        var parallaxValue = scrollPosition * 0.5;
+  
+        // Použitie transformacie pre posun pozadia preface section
+        $('.preface-bg img').css('transform', 'translateY(' + parallaxValue + 'px)');
+    });
+
+      
     // 
     //
     // SCROLLOVANIE Z MENU LINKOV NA SEKCIU
