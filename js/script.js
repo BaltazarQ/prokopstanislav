@@ -1,14 +1,18 @@
 $(document).ready(function($) {
+
     //
-    //
-    // ZOBRAZENIE HEADER
-    //
+    // VARIABLES
     //
     var header = $('header'),
         win = $(window),
         aboutTop = $('#about').offset().top,
         profileTop = $('#profile').offset().top,
         worksTop = $('#works').offset().top;
+
+
+    //
+    // ZOBRAZENIE HEADER
+    //
 
     header.hide();
     win.on('scroll', function () {
@@ -21,10 +25,9 @@ $(document).ready(function($) {
 
 
     //
+    // PARALLAX EFEKT NA PREFACE SECTION
     //
-    // Parallax na preface section
-    //
-    //
+
     $(window).scroll(function() {
         // Získanie hodnoty skrolovania
         var scrollPosition = $(this).scrollTop();
@@ -36,12 +39,11 @@ $(document).ready(function($) {
         $('.preface-bg img').css('transform', 'translateY(' + parallaxValue + 'px)');
     });
 
-      
-    // 
+
     //
     // SCROLLOVANIE Z MENU LINKOV NA SEKCIU
     //
-    // 
+
     var menu = $('.menu');
     var menuLinks = menu.find('a');
     var scrollToSection = function (event) {
@@ -58,11 +60,10 @@ $(document).ready(function($) {
 	menuLinks.on('click', scrollToSection);
 
 
-    //
     // 
     // zvyraznenie linku v menu podla vysky zoskrolovania
     //
-    //
+
     var navLink = $('.menu li'),
         href = navLink.attr('href');
 
@@ -74,17 +75,16 @@ $(document).ready(function($) {
     // ODCHYTIM HODNOTY top VSETKYCH SEKCII DO POLA 
     var mySection = $('main section')
     var allOffset =[]
-    var windowTop = Math.floor($(window).scrollTop())
-    var myMenuItem = $('.navigation li')
+    // var windowTop = Math.floor($(window).scrollTop())
+    // var myMenuItem = $('.navigation li')
     
     mySection.each(function(){
         allOffset.push(Math.floor($(this).offset().top))
     })
-    
 
+    // SLEDUJEM TOP POZICIU NA STRANKE A ZVYRAZNIM V MENU ELEMENT, PODLA VYSKY ZOSKROLOVANIA
     $(window).on('scroll', function() {
         var myTop = win.scrollTop()
-
         if( myTop < (aboutTop+300)) {
             $('#menu-about').find('a').addClass('active');
             $('#menu-about').find('a').parent().siblings().find('a').removeClass('active');
@@ -95,14 +95,11 @@ $(document).ready(function($) {
             $('#menu-works').find('a').addClass('active');
             $('#menu-works').find('a').parent().siblings().find('a').removeClass('active');
         } 
-
     })
 
 
-    // 
 	// 
 	// ===== BACK-TO-TOP SIPKA =====
-	// 
 	// 
 
 	var backToTop = $( '<a>', {

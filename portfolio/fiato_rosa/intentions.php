@@ -1,11 +1,12 @@
 <?php
+    include 'private.php';
 
     // ZAPISANIE UMYSLU DO DATABAZY
     if(isset($_POST['intentionSubmit'])){
         $intention = $_POST['intention'];
 
         // pripojenie do databazy
-        $connection = mysqli_connect('localhost', 'root', 'root', 'fiato');
+        $connection = mysqli_connect($server, $db_username, $db_password, $database);
 
         if ($intention !== ''){
             // odoslanie dat do databazy
@@ -27,7 +28,7 @@
         <?php
 
             // VYPÍSANIE ÚMYSLOV Z DATABÁZY
-            $connection = mysqli_connect('localhost', 'root', 'root', 'fiato');
+            $connection = mysqli_connect($server, $db_username, $db_password, $database);
             $query = "SELECT * FROM intentions";
 
             $result = mysqli_query($connection, $query);

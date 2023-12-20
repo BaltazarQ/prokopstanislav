@@ -2,6 +2,8 @@
     ob_start();
     // REGISTRATION FORM
     function registrationForm() {
+        include 'private.php';
+
         if(isset($_POST['registrationSubmit'])){
             $username = $_POST['username'];
             $password = $_POST['password'];
@@ -15,7 +17,7 @@
             $password = crypt($password, $hashFormat_salt);
             $controlPassword = crypt($controlPassword, $hashFormat_salt);
             // pripojenie do databazy
-            $connection = mysqli_connect('localhost', 'root', 'root', 'fiato');
+            $connection = mysqli_connect($server, $db_username, $db_password, $database);
     
             // if($connection){
             //     echo 'sme pripojeni k databaze';
@@ -50,11 +52,12 @@
 
     // LOGIN FORM
     function loginForm() {
+        include 'private.php';
     
         if(isset($_POST['loginSubmit'])){
             $username = $_POST['username'];
             $password = $_POST['password'];
-            $wronLogIn;
+            $wrongLogIn;
     
             // zahashovanie hesla
             $hashFormat = "$2y$10$";
@@ -64,7 +67,7 @@
             $password = crypt($password, $hashFormat_salt);
     
             // pripojenie do databazy
-            $connection = mysqli_connect('localhost', 'root', 'root', 'fiato');
+            $connection = mysqli_connect($server, $db_username, $db_password, $database);
     
             // vyber dat z databazy podla prihlasovacieho mena
             $controlPassword = "SELECT * FROM users";
@@ -117,7 +120,7 @@
             <input type="text" name="username" class="login-name" placeholder="Zadaj meno">
             <input type="password" name="password" class="login-password" placeholder="Zadaj heslo">
             <input type="password" name="controlPassword" class="login-password" placeholder="Zopakuj heslo">
-            <input type="submit" name="registrationSubmit" value="Potvď" id="submit">
+            <input type="submit" name="registrationSubmit" value="Potvď" class="submit">
         </form>
         <div class="wrong-data">
             <p class="wrong-data-text"><?php registrationForm()?></p>
@@ -126,7 +129,7 @@
         <form id="login-form" class="my-form" method="POST" action="login.php">
             <input type="text" name="username" class="login-name" placeholder="Zadaj meno">
             <input type="password" name="password" class="login-password" placeholder="Zadaj heslo">
-            <input type="submit" name="loginSubmit" value="Potvď" id="submit">
+            <input type="submit" name="loginSubmit" value="Potvď" class="submit">
         </form>
 
         <div class="wrong-data">

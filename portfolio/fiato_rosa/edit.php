@@ -1,10 +1,12 @@
 <?php
+    include 'private.php';
+
     // UPDATE UDAJOV V DATABAZE
     if(isset($_POST['editSubmit'])){
         $id = $_GET['id'];
         $editIntention = $_POST['editIntention'];
 
-        $connection = mysqli_connect('localhost', 'root', 'root', 'fiato');
+        $connection = mysqli_connect($server, $db_username, $db_password, $database);
         $query = "UPDATE intentions SET intention='$editIntention' WHERE id = $id";
         $result = mysqli_query($connection, $query);
 
@@ -15,7 +17,7 @@
     if(isset($_POST['deleteInt'])){
         $id = $_GET['id'];
 
-        $connection = mysqli_connect('localhost', 'root', 'root', 'fiato');
+        $connection = mysqli_connect($server, $db_username, $db_password, $database);
         $query = "DELETE FROM intentions WHERE id=$id";
         $result = mysqli_query($connection, $query);
 
@@ -50,7 +52,7 @@
                 $id = $_GET['id'];
 
                 // PRIPOJENIE DATABAZY a NACITANIE UDAJOV Z DATABAZY
-                $connection = mysqli_connect('localhost', 'root', 'root', 'fiato');
+                $connection = mysqli_connect($server, $db_username, $db_password, $database);
                 $query = "SELECT * FROM intentions WHERE id=$id";
 
                 $result = mysqli_query($connection, $query);
@@ -74,7 +76,7 @@
                     $id = $_GET['id'];
 
                     // PRIPOJENIE DATABAZY a NACITANIE UDAJOV Z DATABAZY
-                    $connection = mysqli_connect('localhost', 'root', 'root', 'fiato');
+                    $connection = mysqli_connect($server, $db_username, $db_password, $database);
                     $query = "SELECT * FROM intentions WHERE id=$id";
             
                     $result = mysqli_query($connection, $query);

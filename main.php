@@ -66,7 +66,7 @@
                 ],
                 [
                     'name' => 'Fiato Rosa',
-                    'link' => 'family-game/index.php',
+                    'link' => 'fiato_rosa/index.php',
                     'tech-list' => 'HTML/PHP, CSS/Sass, SQL, Javascript',
                     'img' => 'fiato-rosa.png',
                     'github' => 'https://github.com/BaltazarQ/fiato-rosa'
