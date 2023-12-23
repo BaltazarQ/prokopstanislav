@@ -262,6 +262,16 @@ main section p {
   padding-top: 0;
   padding: 5%;
 }
+.preface .lng-select {
+  position: fixed;
+  top: 39px;
+  right: 39px;
+  z-index: 200;
+}
+.preface .lng-select a {
+  color: #fca311;
+  padding: 10px;
+}
 .preface-bg {
   position: absolute;
   top: 0;

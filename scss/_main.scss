@@ -72,6 +72,19 @@ main section {
     // z-index: 20;
     // display: none;
 
+    .lng-select {
+        position: fixed;
+        top: 39px;
+        right: 39px;
+        z-index: 200;
+        
+        a{
+            color: $color-highlight;
+            padding: 10px;
+            // border: 1px solid $color-highlight;
+        }
+    }
+
     &-bg {
         position: absolute;
         top: 0;

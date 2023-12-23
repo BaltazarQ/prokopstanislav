@@ -5,9 +5,9 @@ $(document).ready(function($) {
     //
     var header = $('header'),
         win = $(window),
-        aboutTop = $('#about').offset().top,
-        profileTop = $('#profile').offset().top,
-        worksTop = $('#works').offset().top;
+        aboutTop = $('.about').offset().top,
+        profileTop = $('.profile').offset().top,
+        worksTop = $('.works').offset().top;
 
 
     //
@@ -86,14 +86,14 @@ $(document).ready(function($) {
     $(window).on('scroll', function() {
         var myTop = win.scrollTop()
         if( myTop < (aboutTop+300)) {
-            $('#menu-about').find('a').addClass('active');
-            $('#menu-about').find('a').parent().siblings().find('a').removeClass('active');
+            $('.menu-about').find('a').addClass('active');
+            $('.menu-about').find('a').parent().siblings().find('a').removeClass('active');
         } else if (myTop < (profileTop+300)) {
-            $('#menu-profile').find('a').addClass('active');
-            $('#menu-profile').find('a').parent().siblings().find('a').removeClass('active');
+            $('.menu-profile').find('a').addClass('active');
+            $('.menu-profile').find('a').parent().siblings().find('a').removeClass('active');
         } else if (myTop < (worksTop+300)) {
-            $('#menu-works').find('a').addClass('active');
-            $('#menu-works').find('a').parent().siblings().find('a').removeClass('active');
+            $('.menu-works').find('a').addClass('active');
+            $('.menu-works').find('a').parent().siblings().find('a').removeClass('active');
         } 
     })
 
@@ -112,13 +112,35 @@ $(document).ready(function($) {
     .hide()
     .appendTo('body')
     .on('click', function () {
-    $('html, body').animate({ scrollTop: 0});
+        $('html, body').animate({ scrollTop: 0});
     });
 
     win.on('scroll', function () {
-    if ( win.scrollTop() >= 200 ) backToTop.fadeIn();
-    else backToTop.hide();
+        if ( win.scrollTop() >= 200 ) backToTop.fadeIn();
+        else backToTop.hide();
     });
 
+
+    // 
+	// ===== SWITCH LANGUAGE =====
+	// 
+
+    var lng = $('.lng-select a'),
+        lng_en = $('.lng-en'),
+        lng_sk = $('.lng-sk'),
+        menu_en = $('.menu-en'),
+        menu_sk = $('.menu-sk');
+
+    lng_sk.hide();
+    menu_sk.hide();
+
+    lng.on('click', function(event){
+        event.preventDefault();
+
+        lng_sk.toggle();
+        lng_en.toggle();
+        menu_sk.toggle();
+        menu_en.toggle();
+    })
 
 })(jQuery);
