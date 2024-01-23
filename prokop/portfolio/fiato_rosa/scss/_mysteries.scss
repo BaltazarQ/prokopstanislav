@@ -1,0 +1,21 @@
+.main-teens {
+    @include flex-column;
+    padding: 0 5%;
+    flex: 4;
+
+    section {
+        border-bottom: 1px solid $navbar-hover;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        li::before {
+            content: '... ';
+        }
+    }
+}
+
+.requests {
+    list-style-type: lower-alpha;
+}
