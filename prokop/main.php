@@ -60,27 +60,33 @@
                 
             <?php
                 $my_works = [
-                    
-                    [
-                        'name' => 'Quiz',
-                        'link' => 'family-game/index.php',
-                        'tech-list' => 'HTML/PHP, CSS/Sass, Javascript, jQuerry',
-                        'img' => 'family-game.png',
-                        'github' => 'https://github.com/BaltazarQ/family-game'
-                    ],
                     [
                         'name' => 'Fiato Rosa',
-                        'link' => 'fiato_rosa/index.php',
+                        'link' => 'portfolio/fiato_rosa/index.php',
                         'tech-list' => 'HTML/PHP, CSS/Sass, SQL, Javascript',
                         'img' => 'fiato-rosa.png',
                         'github' => 'https://github.com/BaltazarQ/fiato-rosa'
+                    ],
+                    [
+                        'name' => 'Príklad kódu z minulej práce',
+                        'link' => 'https://github.com/BaltazarQ/prokopstanislav/blob/adding-example/example.php',
+                        'tech-list' => 'PHP',
+                        'img' => 'example.png',
+                        'github' => 'https://github.com/BaltazarQ/prokopstanislav/blob/adding-example/example.php'
+                    ],
+                    [
+                        'name' => 'Quiz',
+                        'link' => 'portfolio/family-game/index.php',
+                        'tech-list' => 'HTML/PHP, CSS/Sass, Javascript, jQuerry',
+                        'img' => 'family-game.png',
+                        'github' => 'https://github.com/BaltazarQ/family-game'
                     ],
                 ];
 
                 foreach ($my_works as $work) {
                     ?>
                     <div class="presentation-item">
-                        <a href="portfolio/<?php echo $work['link'];?>" target="blank">
+                        <a href="<?php echo $work['link'];?>" target="blank">
                             <img src="images/<?php echo $work['img'];?>" alt="">
                         </a>
                         <span><?php echo $work['name'];?></span>
@@ -167,27 +173,33 @@
                 
             <?php
                 $my_works = [
-                    
-                    [
-                        'name' => 'Quiz',
-                        'link' => 'family-game/index.php',
-                        'tech-list' => 'HTML/PHP, CSS/Sass, Javascript, jQuerry',
-                        'img' => 'family-game.png',
-                        'github' => 'https://github.com/BaltazarQ/family-game'
-                    ],
                     [
                         'name' => 'Fiato Rosa',
-                        'link' => 'fiato_rosa/index.php',
+                        'link' => 'portfolio/fiato_rosa/index.php',
                         'tech-list' => 'HTML/PHP, CSS/Sass, SQL, Javascript',
                         'img' => 'fiato-rosa.png',
                         'github' => 'https://github.com/BaltazarQ/fiato-rosa'
+                    ],
+                    [
+                        'name' => 'Example of code from previous job',
+                        'link' => 'https://github.com/BaltazarQ/prokopstanislav/blob/adding-example/example.php',
+                        'tech-list' => 'PHP',
+                        'img' => 'example.png',
+                        'github' => 'https://github.com/BaltazarQ/prokopstanislav/blob/adding-example/example.php'
+                    ],
+                    [
+                        'name' => 'Quiz',
+                        'link' => 'portfolio/family-game/index.php',
+                        'tech-list' => 'HTML/PHP, CSS/Sass, Javascript, jQuerry',
+                        'img' => 'family-game.png',
+                        'github' => 'https://github.com/BaltazarQ/family-game'
                     ],
                 ];
 
                 foreach ($my_works as $work) {
                     ?>
                     <div class="presentation-item">
-                        <a href="portfolio/<?php echo $work['link'];?>" target="blank">
+                        <a href="<?php echo $work['link'];?>" target="blank">
                             <img src="images/<?php echo $work['img'];?>" alt="">
                         </a>
                         <span><?php echo $work['name'];?></span>
